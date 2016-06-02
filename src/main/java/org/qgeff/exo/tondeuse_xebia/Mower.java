@@ -16,6 +16,20 @@ public class Mower {
 		this.y = y;
 		this.direction = direction;
 	}
+	
+	public Mower(String[] split) {
+		this.x = Integer.parseInt(split[0]);
+		this.y = Integer.parseInt(split[1]);
+		this.direction = new Direction(Direction.toInteger(split[2]));
+	}
+
+	public void right(){
+		direction.right();
+	}
+	
+	public void left(){
+		direction.left();
+	}
 
 	public Integer getX() {
 		return x;
@@ -23,7 +37,7 @@ public class Mower {
 
 	public void setX(Integer x) {
 		this.x = x;
-	}
+	} 
 
 	public Integer getY() {
 		return y;
@@ -44,13 +58,11 @@ public class Mower {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Mower [x=");
 		builder.append(x);
-		builder.append(", y=");
+		builder.append(" ");
 		builder.append(y);
-		builder.append(", direction=");
+		builder.append(" ");
 		builder.append(direction);
-		builder.append("]");
 		return builder.toString();
 	}
 }
