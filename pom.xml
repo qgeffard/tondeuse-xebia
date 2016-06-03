@@ -15,6 +15,7 @@
 		<assertj.version>3.4.1</assertj.version>
 		<junit.version>4.12</junit.version>
 		<logback.version>1.1.7</logback.version>
+		<commons-io.version>2.5</commons-io.version>
 	</properties>
 
 	<build>
@@ -37,6 +38,13 @@
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>${logback.version}</version>
+		</dependency>
+
+		<!-- http://mvnrepository.com/artifact/commons-io/commons-io -->
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
 		</dependency>
 
 		<dependency>

@@ -17,13 +17,13 @@ public class MowItNow {
 	}
 
 	public String run(String actions) {
-		logger.info("Mow it now !");
-		logger.info(grid.toString());
+		logger.trace("Mow it now !");
+		logger.trace(grid.toString());
 		for (int i = 0; i < actions.length(); i++) {
-			logger.info("Turn - {}",i);
+			logger.trace("Turn - {}",i);
 			
 			String action = String.valueOf(actions.charAt(i));
-			logger.info(action);
+			logger.trace(action);
 			switch (action) {
 			case "D":
 				this.grid.getMower().right();
@@ -38,12 +38,12 @@ public class MowItNow {
 				break;
 			}
 
-			logger.info("Grid state :");
-			logger.info(grid.toString());
+			logger.trace("Grid state :");
+			logger.trace(grid.toString());
 		}
 		
-		logger.info("Fin :");
-		logger.info(grid.getMower().toString());
+		logger.trace("Fin :");
+		logger.trace(grid.getMower().toString());
 		return grid.getMower().toString();
 	}
 
